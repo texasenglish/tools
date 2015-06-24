@@ -9,4 +9,3 @@ def secondconverter (timestamp):
 	#we do the math
 	seconds=int(result[0][0])*3600+int(result[0][1])*60+int(result[0][2])
 	return (str(seconds)+"."+result[0][3])
-	print (str(seconds)+"."+result[0][3])
