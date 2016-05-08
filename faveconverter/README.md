@@ -1,8 +1,9 @@
 ## The Faveconverter
 
 ### Description
-The script converts various subtitle formats into a tab-delimited .txt file for vowel alignment. 
-It accepts SubRip, Subviewer or VTT files and adapts them to the formatting required by the University of Pennsylvania's Forced Vowel Alignment and Extraction ([FAVE](http://fave.ling.upenn.edu/)*) algorithm.
+The Faveconverter converts various subtitle formats into a tab-delimited .txt file for vowel alignment. 
+
+It accepts SubRip, Subviewer or VTT files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction ([FAVE](http://fave.ling.upenn.edu/)*) algorithm.
 
 
 Arguments:
