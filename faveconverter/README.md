@@ -1,9 +1,9 @@
 ## The Faveconverter
 
 ### Description
-The Faveconverter converts various subtitle formats into a tab-delimited .txt file for vowel alignment. 
+The Faveconverter converts various subtitle formats into tab-delimited .txt files for vowel alignment. 
 
-It accepts SubRip, Subviewer or VTT files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction ([FAVE](http://fave.ling.upenn.edu/)*) algorithm.
+It accepts SubRip, Subviewer or VTT files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction* ([FAVE](http://fave.ling.upenn.edu/)) algorithm.
 
 The script takes a folder as input and converts all the files in this folder. It will not replace any of the original files. Instead, it will create a new file that consists of the original file name plus the ending  "_faved.txt". 
 
@@ -12,11 +12,11 @@ Arguments:
 
     speaker_name -- the name of the main tier; this will be used for labeling by FAVE.
 
-    file_type -- the formatting of the input file. Default ist .srt (SubRip Text), but also accepts Subviewer (.sub or .sbv) and WebVTT (.vtt). 
+    file_type -- the formatting of the input file. Default ist .srt (SubRip Text), also accepts Subviewer (.sub or .sbv) and WebVTT (.vtt). 
 
     file_encoding -- character encoding of the input file. Default is utf-8 but will accept anything Python can deal with. 
 
-    speaker_id -- the speaker ID is an optional speaker identifier that will not be used by FAVE.  
+    speaker_id -- the speaker ID. An optional speaker identifier that will not be further processed by FAVE.  
     
     Additionally, the user will be asked to select a folder containing the input files via a graphical interface. 
 
@@ -66,7 +66,7 @@ Thus,
 will work with an input file formatted according to the sbv specifications and is encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
 
 
-#### Etc
+### Etc
 
 
 
