@@ -10,7 +10,7 @@ The Faveconverter takes a folder as input and converts all the files in this fol
 
 Arguments:
 
-    speaker_name -- the name of the main tier; this will be used for labeling by FAVE.
+    speaker_name -- the name of the speaker; this will be used as the label of the main tier in the FAVE output.
 
     file_type -- the formatting of the input file. Default ist .srt (SubRip Text), also accepts Subviewer (.sub or .sbv) and WebVTT (.vtt). 
 
