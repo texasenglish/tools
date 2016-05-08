@@ -3,9 +3,9 @@
 ### Description
 The Faveconverter converts various subtitle formats into tab-delimited .txt files for vowel alignment. 
 
-It accepts SubRip, Subviewer or VTT files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction* ([FAVE](http://fave.ling.upenn.edu/)) algorithm.
+It accepts [SubRip](https://en.wikipedia.org/wiki/SubRip), [Subviewer](https://en.wikipedia.org/wiki/SubViewer) or [VTT](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format) files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction* ([FAVE](http://fave.ling.upenn.edu/)) algorithm. SubRip, Subviewer and VVT files are used for most online video subtitling e.g. on YouTube. 
 
-The script takes a folder as input and converts all the files in this folder. It will not replace any of the original files. Instead, it will create a new file that consists of the original file name plus the ending  "_faved.txt". 
+The Faveconverter takes a folder as input and converts all the files in this folder. It will not replace any of the original files. Instead, it will create a new file that consists of the original file name plus the ending  "_faved.txt". 
 
 
 Arguments:
@@ -21,6 +21,7 @@ Arguments:
     Additionally, the user will be asked to select a folder containing the input files via a graphical interface. 
 
 *Rosenfelder, Ingrid; Fruehwald, Joe; Evanini, Keelan and Jiahong Yuan. 2011. FAVE (Forced Alignment and Vowel Extraction) Program Suite. http://fave.ling.upenn.edu.
+The Faceconverter was developed for the [Texas English Linguistics Lab](http://www.texasenglish.org/) at [UT Austin](https://twitter.com/TexasSports). 
 
 
 ### How to run it
@@ -68,5 +69,12 @@ will work with an input file formatted according to the sbv specifications and i
 
 ### Etc
 
+The MIT License (MIT)
+Copyright (c) 2016 Patrick Schultz
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
