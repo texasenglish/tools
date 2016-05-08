@@ -12,7 +12,7 @@ Arguments:
 
     speaker_name -- the name of the speaker; this will be used as the label of the main tier in the FAVE output.
 
-    file_type -- the formatting of the input file. Default ist .srt (SubRip Text), also accepts Subviewer (.sub or .sbv) and WebVTT (.vtt). 
+    file_type -- the formatting of the input file. Default ist `srt` (SubRip Text), also accepts Subviewer (`sub` or `sbv`) and WebVTT (`vtt`). 
 
     file_encoding -- character encoding of the input file. Default is utf-8 but will accept anything Python can deal with. 
 
@@ -21,6 +21,7 @@ Arguments:
     Additionally, the user will be asked to select a folder containing the input files via a graphical interface. 
 
 *Rosenfelder, Ingrid; Fruehwald, Joe; Evanini, Keelan and Jiahong Yuan. 2011. FAVE (Forced Alignment and Vowel Extraction) Program Suite. http://fave.ling.upenn.edu.
+
 The Faceconverter was developed for the [Texas English Linguistics Lab](http://www.texasenglish.org/) at [UT Austin](https://twitter.com/TexasSports). 
 
 
@@ -56,7 +57,7 @@ where "Patrick" is the name of your speaker. Additional settings, to be added in
 
     file_type, file_encoding, speaker_id
 
-where `file_type` is the formatting of the input file (default is `"srt"`, but accepts `"sub"`, `"sbv"`, `"vtt"` as well). `file_encoding` (default is `"utf-8"`) specifies the character encoding of the file; either `"utf-8"` or `"ascii"` should work for most English-language files. `speaker_id` is an optional column in the tab-delimited file that FAVE works with, but it is not part of the Textgrid FAVE returns. Default setting is `"default"`. 
+where `file_type` is the formatting of the input file (default is `"srt"`, but accepts `"sub"`, `"sbv"`, `"vtt"` as well). Note that usually the file name extension will co-incide with the formatting (i.e. a "srt" file will be called XYZ.srt) but it need not be so. The file can as well be called ".txt" or ".xx". Changing the file name will not change the file formatting. `file_encoding` (default is `"utf-8"`) specifies the character encoding of the file; either `"utf-8"` or `"ascii"` should work for most English-language files. `speaker_id` is an optional column in the tab-delimited file that FAVE works with, but it is not part of the Textgrid FAVE returns. Default setting is `"default"`. 
 
 
 #### Example
@@ -68,6 +69,9 @@ will work with an input file formatted according to the sbv specifications and i
 
 
 ### Etc
+
+Citation. 
+Schultz, Patrick. Faveconverter: A tool for subtitle conversion, 2016, https://github.com/patrickschu/txenglish/tree/master/faveconverter [Online; accessed XXXX-XX-XX].
 
 The MIT License (MIT)
 Copyright (c) 2016 Patrick Schultz
