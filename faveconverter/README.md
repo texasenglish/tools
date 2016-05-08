@@ -68,7 +68,7 @@ Thus,
 will work with an input file formatted according to the sbv specifications and is encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
 
 
-### Etc
+### Etc.
 
 Citation. 
 Schultz, Patrick. Faveconverter: A tool for subtitle conversion, 2016, https://github.com/patrickschu/txenglish/tree/master/faveconverter [Online; accessed XXXX-XX-XX].
