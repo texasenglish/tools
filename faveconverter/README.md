@@ -27,9 +27,12 @@ The Faceconverter was developed for the [Texas English Linguistics Lab](http://w
 
 ### How to run it
 #### Preparations
-It's easiest run this script from the command line. On a Mac, all you need to do is open the Terminal (search for "Terminal.app" in the "Applications" folder). 
+It's easiest run this script from the command line. 
+
+On a Mac, all you need to do is open the Terminal (search for "Terminal.app" in the "Applications" folder). 
 On Windows, you might have to install [Python](https://www.python.org/downloads/windows/) first and [change](http://www.anthonydebarros.com/2015/08/16/setting-up-python-in-windows-10/) the command line settings. 
 Then you can use the command line tool (just type 'cmd' into the All Programs window). 
+
 Download the script. You need faveconverter_py2.py if you are running Python 2, faveconverter_py3.py if you are running Python 3. 
 If you are unsure which version you have on your computer, type 
 
@@ -47,7 +50,7 @@ on Windows:
 
 `cd `
 
-Hint: hit `cd ..` to take a step back, type `ls` to look at the folder you are in. Basic command line commands are given for the Mac [here](https://www.git-tower.com/blog/command-line-cheat-sheet/) and for Windows [here](http://www.cs.columbia.edu/~sedwards/classes/2016/1102-spring/Command%20Prompt%20Cheatsheet.pdf).
+Hint: type `cd ..` to take a step back, or `ls` to look at the contents of the folder you are in. Basic command line commands are listed for the Mac [here](https://www.git-tower.com/blog/command-line-cheat-sheet/) and for Windows [here](http://www.cs.columbia.edu/~sedwards/classes/2016/1102-spring/Command%20Prompt%20Cheatsheet.pdf).
 
 Now you can run the script like so:
 
