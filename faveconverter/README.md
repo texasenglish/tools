@@ -50,7 +50,7 @@ on Windows:
 
 `cd `
 
-Hint: type `cd ..` to take a step back, or `ls` to look at the contents of the folder you are in. Basic command line commands are listed for the Mac [here](https://www.git-tower.com/blog/command-line-cheat-sheet/) and for Windows [here](http://www.cs.columbia.edu/~sedwards/classes/2016/1102-spring/Command%20Prompt%20Cheatsheet.pdf).
+Hint: type `cd ..` to take a step back, or `ls` to look at the contents of the folder you are in. Basic shell commands are listed for the Mac [here](https://www.git-tower.com/blog/command-line-cheat-sheet/) and for Windows [here](http://www.cs.columbia.edu/~sedwards/classes/2016/1102-spring/Command%20Prompt%20Cheatsheet.pdf).
 
 Now you can run the script like so:
 
