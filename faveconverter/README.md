@@ -12,7 +12,7 @@ Arguments:
 
     speaker_name -- the name of the speaker; this will be used as the label of the main tier in the FAVE output.
 
-    file_type -- the formatting of the input file. Default ist `srt` (SubRip Text), also accepts Subviewer (`sub` or `sbv`) and WebVTT (`vtt`). 
+    file_type -- the formatting of the input file. Default ist "srt" (SubRip Text), also accepts Subviewer ("sub" or "sbv") and WebVTT ("vtt"). 
 
     file_encoding -- character encoding of the input file. Default is utf-8 but will accept anything Python can deal with. 
 
@@ -65,12 +65,13 @@ Thus,
 
     python faveconverter_p2.py "Patrick" "sbv" "utf-8" "PP"
 
-will work with an input file formatted according to the sbv specifications and is encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
+will work with an input file formatted according to the sbv specifications and that is encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
 
 
 ### Etc.
 
 Citation. 
+
 Schultz, Patrick. Faveconverter: A tool for subtitle conversion, 2016, https://github.com/patrickschu/txenglish/tree/master/faveconverter [Online; accessed XXXX-XX-XX].
 
 The MIT License (MIT)
