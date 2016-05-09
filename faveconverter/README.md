@@ -1,7 +1,7 @@
 ## The Faveconverter
 
 ### Description
-The Faveconverter converts various subtitle formats into tab-delimited .txt files for vowel alignment. 
+The Faveconverter converts various subtitle formats into tab-delimited .txt files to be used for vowel alignment in FAVE. 
 
 It accepts [SubRip](https://en.wikipedia.org/wiki/SubRip), [Subviewer](https://en.wikipedia.org/wiki/SubViewer) or [VTT](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format) files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction* ([FAVE](http://fave.ling.upenn.edu/)) algorithm. SubRip, Subviewer and VVT files are used for most online video subtitling e.g. on YouTube. 
 
