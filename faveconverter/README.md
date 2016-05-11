@@ -27,7 +27,7 @@ The Faceconverter was developed for the [Texas English Linguistics Lab](http://w
 
 ### How to run it
 #### Preparations
-It's easiest run this script from the command line. 
+It's easiest run to this script from the command line. 
 
 On a Mac, all you need to do is open the Terminal (search for "Terminal.app" in the "Applications" folder). 
 On Windows, you might have to install [Python](https://www.python.org/downloads/windows/) first and [change](http://www.anthonydebarros.com/2015/08/16/setting-up-python-in-windows-10/) the command line settings. 
