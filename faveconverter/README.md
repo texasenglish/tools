@@ -5,16 +5,16 @@ The Faveconverter converts various subtitle formats into tab-delimited .txt file
 
 It accepts [SubRip](https://en.wikipedia.org/wiki/SubRip), [Subviewer](https://en.wikipedia.org/wiki/SubViewer) or [VTT](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format) files and adapts them to the template required by the University of Pennsylvania's Forced Vowel Alignment and Extraction* ([FAVE](http://fave.ling.upenn.edu/)) algorithm. SubRip, Subviewer and VVT files are used for most online video subtitling e.g. on YouTube. 
 
-The Faveconverter takes a folder as input and converts all the files in this folder. It will not replace any of the original files. Instead, it will create a new file that consists of the original file name plus the ending  "_faved.txt". 
+The Faveconverter takes a folder as input and converts all the files contained in this folder. It will not replace any of the original files. Instead, it will create new .txt files consisting of the original file name plus the ending  "_faved.txt". 
 
 
 Arguments:
 
-    speaker_name -- the name of the speaker; this will be used as the label of the main tier in the FAVE output.
+    speaker_name -- the name or ID of the speaker; in the FAVE output, this will be the label of the main tier.
 
     file_type -- the formatting of the input file. Default ist "srt" (SubRip Text), also accepts Subviewer ("sub" or "sbv") and WebVTT ("vtt"). 
 
-    file_encoding -- character encoding of the input file. Default is utf-8 but will accept anything Python can deal with. 
+    file_encoding -- character encoding of the input file. Default is utf-8, but will accept anything Python can deal with. 
 
     speaker_id -- the speaker ID. An optional speaker identifier that will not be further processed by FAVE.  
     
@@ -41,7 +41,7 @@ If you are unsure which version you have on your computer, type
 into the command line prompt. 
 
 #### Running the script
-Click on "Raw" on the top right of the screen, then download the resulting textfile. Use the Terminal to navigate to the folder you saved the script in. If it is in Downloads, for instance, do this:
+After navigating to the right version of the script, click on "Raw" on the top right of the screen. Download the resulting textfile. Use the Terminal to navigate to the folder you saved the script in. If it is in Downloads, for instance, do this:
 
 on the Mac:
 
@@ -61,7 +61,7 @@ where "Patrick" is the name of your speaker. Additional settings, to be added in
 
     file_type, file_encoding, speaker_id
 
-where `file_type` is the formatting of the input file (default is `"srt"`, but accepts `"sub"`, `"sbv"`, `"vtt"` as well). Note that usually the file name extension will co-incide with the formatting (i.e. a "srt" file will be called XYZ.srt) but it need not be so. The file can as well be called ".txt" or ".xx". Changing the file name will not change the file formatting. `file_encoding` (default is `"utf-8"`) specifies the character encoding of the file; either `"utf-8"` or `"ascii"` should work for most English-language files. `speaker_id` is an optional column in the tab-delimited file that FAVE works with, but it is not part of the Textgrid FAVE returns. Default setting is `"default"`. 
+where `file_type` is the formatting of the input file (default is `"srt"`, but accepts `"sub"`, `"sbv"`, `"vtt"` as well). Note that  the file name extension will usually co-incide with the formatting (i.e. a "srt" file will be called XYZ.srt) but it need not be so. The file might as well be called ".txt" or ".xx": changing the file name will not change the file formatting. `file_encoding` (default is `"utf-8"`) specifies the character encoding of the file; either `"utf-8"` or `"ascii"` should work for most English-language files. `speaker_id` is an optional column in the tab-delimited file that FAVE works with, but it is not part of the Praat-Textgrid FAVE returns. Default setting is `"default"`. 
 
 
 #### Example
@@ -69,7 +69,7 @@ Thus,
 
     python faveconverter_p2.py "Patrick" "sbv" "utf-8" "PP"
 
-will work with an input file formatted according to the sbv specifications and that is encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
+will work with an input file formatted according to the sbv specifications and encoded in UTF-8. The script will add "Patrick" as the speaker name, and "PP" as the speaker ID. 
 
 
 ### Etc.
