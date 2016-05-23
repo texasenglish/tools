@@ -11,15 +11,16 @@ The Contextfinder accepts comma-separated and tab-delimited files. It adds the c
 
 For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could list the transcribed vowel (*AY1*) in a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings to the Contextfinder.  
 
+    contextfinder.py file_name, vowel_column, word_column, pre_distance=-1, post_distance=1, dialect='excel'
 
 Arguments
 
     file_name -- the name of the file to be processed. Use the full path e.g. '~/Downloads/dataset.csv'.
     variable_column -- the name of the column in your dataset that contains the ARPABET-transcribed sound of interest.
     word_column -- the name of the column in your dataset that contains the word containing the variable from variable_column.
-    pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound
-    post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound
-    dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'
+    pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound.
+    post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound.
+    dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
 
 ###How to run it
 >For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md).
