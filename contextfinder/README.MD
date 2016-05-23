@@ -23,7 +23,12 @@ Arguments
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
 
 ###How to run it
->For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md).
+>For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). You need to have the Natural Language Toolkit installed for this to work. If you don't, simply type
+
+    easy_install --user nltk
+    python -m nltk.downloader ‘cmudict’
+
+into the Terminal or Command Line Prompt. 
 
 Note that there is a version of Contextfinder for [Python 2](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py2.py) and one for [Python 3](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py3.py). 
 
