@@ -37,8 +37,8 @@ def main(file_name, vowel_column, word_column, pre_distance=-1, post_distance=1,
 		word = datadict[entry][word_column]
 		transcript = [i for i in cmudict[word.lower()] if vowel in i]
 		if len(transcript) < 1:
-			print "\n---\nError in line {}:".format(entry)
-			print "In the CMU dictionary, word {} does not contain the vowel {}".format(word, vowel)		
+			print("\n---\nError in line {}:".format(entry))
+			print("In the CMU dictionary, word {} does not contain the vowel {}".format(word, vowel))		
 		else:
 			transcript=transcript[0]
 			vowelindex=transcript.index(vowel)
@@ -48,20 +48,20 @@ def main(file_name, vowel_column, word_column, pre_distance=-1, post_distance=1,
 	#output
 	outputfile=open(os.path.expanduser(filename.rstrip(".csv")+"_context_added.csv"), "w")
 	outputcsv=csv.writer(outputfile)
-	header=datadict.values()[0].keys()
+	header=list(datadict.values())[0].keys()
 	outputcsv.writerow(header)
 	for entry in datadict:
 		if len(datadict[entry]) == len(header):
-			outputcsv.writerow(datadict[entry].values())
+			outputcsv.writerow(list(datadict[entry].values()))
 		else:
-			print "\n---\nWarning: Row {} not added to outputfile {}\n---\n".format(entry, outputfile.name)
+			print("\n---\nWarning: Row {} not added to outputfile {}\n---\n".format(entry, outputfile.name))
 	
 	pre=set([datadict[i].get('pre_sound', None) for i in datadict])
 	post=[datadict[i].get('post_sound', None) for i in datadict]
 	#print ",".join([str(s) for s in pre])
-	print "The following sounds occur in pre-vocalic position: \n{}".format(", ".join([str(s) for s in pre]))
-	print "The following sounds occur in post-vocali position: \n{}".format(", ".join([str(s) for s in pre]))
- 	print "\nFinished. File written to ", outputfile.name
+	print("The following sounds occur in pre-vocalic position: \n{}".format(", ".join([str(s) for s in pre])))
+	print("The following sounds occur in post-vocali position: \n{}".format(", ".join([str(s) for s in pre])))
+ 	print("\nFinished. File written to ", outputfile.name)
 	
 if __name__ == "__main__":
     main(*sys.argv[1:])
