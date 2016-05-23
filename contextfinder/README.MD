@@ -16,7 +16,7 @@ Arguments
 
     file_name -- the name of the file to be processed. Use the full path e.g. '~/Downloads/dataset.csv'.
     variable_column -- the name of the column in your dataset that contains the ARPABET-transcribed sound of interest.
-    word_column -- the name of the column in your dataset that contains the word containing the variable.
+    word_column -- the name of the column in your dataset that contains the word containing the variable from variable_column.
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'
