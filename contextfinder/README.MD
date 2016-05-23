@@ -39,7 +39,7 @@ While this returns *None* for both preceding and following sound in *high* becau
 
 Citation. 
 
-Schultz, Patrick. The Contextfinder: Automatic extraction of linguistic context, 2016, https://github.com/patrickschu/txenglish/edit/master/contextfinder/ [Online; accessed XXXX-XX-XX].
+Schultz, Patrick. The Contextfinder: automatic extraction of linguistic context, 2016, https://github.com/patrickschu/txenglish/edit/master/contextfinder/ [Online; accessed XXXX-XX-XX].
 
 The MIT License (MIT)
 Copyright (c) 2016 Patrick Schultz
