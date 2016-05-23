@@ -22,7 +22,8 @@ Arguments
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'
 
 ###How to run it
-For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
+>For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md).
+There is a version of Contextfinder for [Python 2](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py2.py) and one for [Python 3](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py3.py). 
 For example, if we were dealing with the spreadsheet described above, we might enter
 
     main('~/Downloads/dataset.csv','vowel', 'word')
