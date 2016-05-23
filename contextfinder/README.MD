@@ -9,7 +9,7 @@ The Contextfinder accepts comma-separated and tab-delimited files. It adds the c
 * the word_column: a column with the word the respective variable occurred in. 
 * The spreadsheet may contain any number of additional columns. 
 
-For instance, if we have an instance of the word *high* and are interested in the performance of its vowel, we could list the transcribed vowel (AY1) in a column labeled *vowel* and the word *high* in a column labeled *word*. See below on how this would be reflected in the settings to the Contextfinder.  
+For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could list the transcribed vowel (*AY1*) in a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings to the Contextfinder.  
 
 
 Arguments
@@ -20,6 +20,7 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'
+
 ###How to run it
 For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
 For example, if we were dealing with the spreadsheet described above, we might enter
