@@ -16,7 +16,7 @@ def locator(transcription, index, distance):
 cmudict = nltk.corpus.cmudict.dict()
 
 
-def main(file_name, variable_column, word_column, pre_distance=-1, post_distance=1, dialect='excel'):
+def main(file_name, vowel_column, word_column, pre_distance=-1, post_distance=1):
 	'''
 	Extract pre-vocalic and post-vocalic sounds based on CMU transcriptions. 
 	Write to csv under column names pre-sound and post_sound.
@@ -33,7 +33,7 @@ def main(file_name, variable_column, word_column, pre_distance=-1, post_distance
 			count = count+1
 	#iterate over rows
 	for entry in datadict:
-		vowel = datadict[entry][variable_column]
+		vowel = datadict[entry][vowel_column]
 		word = datadict[entry][word_column]
 		transcript = [i for i in cmudict[word.lower()] if vowel in i]
 		if len(transcript) < 1:
