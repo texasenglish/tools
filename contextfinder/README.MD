@@ -2,9 +2,12 @@
 
 The Contextfinder takes a file with speech sounds and uses the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) to add sounds preceding or following the sound of interest.
 
-The Contextfinder accepts comma-separated and tab-delimited files. The dataset must contain  
--a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
--a column with the word the respective variable occurred in. 
+The Contextfinder accepts comma-separated and tab-delimited files. The dataset must contain 
+
+*a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
+
+*a column with the word the respective variable occurred in. 
+
 For instance, if we have an instance of the word *high* and are interested in the performance of its vowel, we could list the transcribed vowel (AY1) in a column labeled *vowel* and the word *high* in a column labeled *word*. See below on how this would be reflected in the settings to the Contextfinder.  
 
 
