@@ -29,7 +29,7 @@ Note that there is a version of Contextfinder for [Python 2](https://github.com/
 
 For example, if we were dealing with the spreadsheet described above, we might enter
 
-   python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word'
+    python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word'
 
 This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the AY0 in high, for instance, it would add HH (preceding sound) and None (following sound) in the columns pre_sound and post_sound respectively. Note that you need to use quotation marks around the variable_name and column_name. 
 
