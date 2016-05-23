@@ -3,7 +3,7 @@
 ###Description
 The Contextfinder takes a file with speech sounds and uses the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) to add sounds preceding or following the sound of interest.
 
-The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". The dataset must contain 
+The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". The initial dataset must contain 
 
 * the variable_column: a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
 * the word_column: a column with the word the respective variable occurred in. 
