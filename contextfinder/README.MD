@@ -1,12 +1,12 @@
-####The Contextfinder
+##The Contextfinder
 
+###Description
 The Contextfinder takes a file with speech sounds and uses the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) to add sounds preceding or following the sound of interest.
 
-The Contextfinder accepts comma-separated and tab-delimited files. The dataset must contain 
+The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". The dataset must contain 
 
-*a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
-
-*a column with the word the respective variable occurred in. 
+* the variable_column: a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
+* the word_column: a column with the word the respective variable occurred in. The spreadsheet may contain any other number of columns. 
 
 For instance, if we have an instance of the word *high* and are interested in the performance of its vowel, we could list the transcribed vowel (AY1) in a column labeled *vowel* and the word *high* in a column labeled *word*. See below on how this would be reflected in the settings to the Contextfinder.  
 
@@ -19,10 +19,31 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'
-
+###How to run it
+For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
 For example, if we were dealing with the spreadsheet described above, we might enter
 
     main('~/Downloads/dataset.csv','vowel', 'word')
 
-This would return a spreadsheet with 
-    
+This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the AY0 in high, for instance, it would add HH (preceding sound) and None (following sound) in the columns pre_sound and post_sound respectively. Note that you need to use quotation marks around the variable_name and column_name. 
+
+The following command extracts the sounds two characters away from the variable and works with a tab-delimited file:
+
+    main('~/Downloads/dataset.csv','vowel', 'word', pre_distance=-2, post_distance=2, dialect='excel-tab')
+
+While this returns None for both preceding and following sound in high, but it would give us an AH0 as following sound in the word highness (ARPABET:  HH AY1 N AH0 S).
+
+### Etc.
+
+Citation. 
+
+Schultz, Patrick. The Contextfinder: Automatic extraction of linguistic context, 2016, https://github.com/patrickschu/txenglish/edit/master/contextfinder/ [Online; accessed XXXX-XX-XX].
+
+The MIT License (MIT)
+Copyright (c) 2016 Patrick Schultz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
