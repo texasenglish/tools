@@ -33,7 +33,7 @@ The following command extracts the sounds two characters away from the variable 
 
     main('~/Downloads/dataset.csv','vowel', 'word', pre_distance=-2, post_distance=2, dialect='excel-tab')
 
-While this returns None for both preceding and following sound in high, but it would give us an AH0 as following sound in the word highness (ARPABET:  HH AY1 N AH0 S).
+While this returns *None* for both preceding and following sound in *high* because the word is too short, it returns an *AH0* as following sound in the word *highness* (ARPABET:  *HH AY1 N AH0 S*).
 
 ### Etc.
 
