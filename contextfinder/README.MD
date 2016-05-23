@@ -11,7 +11,7 @@ The Contextfinder accepts comma-separated and tab-delimited files. It adds the c
 
 For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could list the transcribed vowel (*AY1*) in a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings to the Contextfinder.  
 
-    contextfinder.py file_name, vowel_column, word_column, pre_distance=-1, post_distance=1, dialect='excel'
+    python contextfinder_py2.py file_name, vowel_column, word_column, pre_distance=-1, post_distance=1, dialect='excel'
 
 Arguments
 
@@ -24,16 +24,18 @@ Arguments
 
 ###How to run it
 >For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md).
-There is a version of Contextfinder for [Python 2](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py2.py) and one for [Python 3](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py3.py). 
+
+Note that there is a version of Contextfinder for [Python 2](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py2.py) and one for [Python 3](https://github.com/patrickschu/txenglish/blob/master/contextfinder/contextfinder_py3.py). 
+
 For example, if we were dealing with the spreadsheet described above, we might enter
 
-    main('~/Downloads/dataset.csv','vowel', 'word')
+   python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word'
 
 This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the AY0 in high, for instance, it would add HH (preceding sound) and None (following sound) in the columns pre_sound and post_sound respectively. Note that you need to use quotation marks around the variable_name and column_name. 
 
 The following command extracts the sounds two characters away from the variable and works with a tab-delimited file:
 
-    main('~/Downloads/dataset.csv','vowel', 'word', pre_distance=-2, post_distance=2, dialect='excel-tab')
+    python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word', pre_distance=-2, post_distance=2, dialect='excel-tab'
 
 While this returns *None* for both preceding and following sound in *high* because the word is too short, it returns an *AH0* as following sound in the word *highness* (ARPABET:  *HH AY1 N AH0 S*).
 
