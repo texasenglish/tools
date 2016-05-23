@@ -23,7 +23,7 @@ Arguments
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
 
 ###How to run it
->For general instruction on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
+>For general instructions on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
 
 ####Preparations
 
