@@ -5,8 +5,8 @@ The Contextfinder takes a file with speech sounds and uses the [CMU Pronouncing 
 
 The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". The initial dataset must contain 
 
-* the variable_column: a column of variables transcribed according to the [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
-* the word_column: a column with the word the respective variable occurred in. 
+* the variable_column: a column of any name containing the variables, transcribed according to  [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions and 
+* the word_column: a column of any name with the word the respective variable occurred in. 
 * The spreadsheet may contain any number of additional columns. 
 
 For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could list the transcribed vowel (*AY1*) in a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings to the Contextfinder.  
@@ -42,7 +42,7 @@ For example, if we were dealing with the spreadsheet described above, we might e
 
     python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word'
 
-This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the AY0 in high, for instance, it would add HH (preceding sound) and None (following sound) in the columns pre_sound and post_sound respectively. Note that you need to use quotation marks around the variable_name and column_name. 
+This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the *AY0* in *high*, for instance, it adds *HH* (preceding sound) and *None* (following sound) to the columns 'pre_sound' and 'post_sound' respectively. It also enters the complete transcription *HH AY0* into a column called 'cmu_transcription'. Note that you need to use quotation marks around the variable_name and column_name when calling the Contextfinder. 
 
 The following command extracts the sounds two characters away from the variable and works with a tab-delimited file:
 
