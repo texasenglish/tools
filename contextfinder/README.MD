@@ -11,7 +11,7 @@ The Contextfinder accepts comma-separated and tab-delimited files. It adds the c
 
 For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could enter the transcribed vowel (*AY1*) into a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings of Contextfinder.  
 
-    python contextfinder_py2.py file_name vowel_column word_column pre_distance=-1 post_distance=1 dialect='excel' dict_file=None
+    python contextfinder_py2.py file_name, vowel_column, word_column, pre_distance=-1, post_distance=1, dialect='excel', dict_file=None
 
 Arguments
 
@@ -21,7 +21,7 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound.
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound.
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
-    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line. See [below](https://github.com/patrickschu/txenglish/blob/master/contextfinder/README.MD#preparations) for formatting. 
+    dict_file (optional) -- the path to a text file that matches sounds to labels, with one sound:label pair per line. See [below](https://github.com/patrickschu/txenglish/blob/master/contextfinder/README.MD#preparations) for formatting. 
     
 
 ###How to run it
@@ -29,7 +29,7 @@ Arguments
 
 ####Preparations
 
-The file that matches sounds to labels must consist of one sound-label pair per line, separated by  colon (*:*). Thus: *sound1:label1*
+The file that matches sounds to labels must consist of one sound-label pair per line, separated by a colon (*:*). Thus: *sound1:label1*
 
 For instance:
 >...
@@ -53,13 +53,13 @@ Note that there is a version of Contextfinder for [Python 2](https://github.com/
 
 For example, if we were dealing with the spreadsheet described above, we might enter
 
-    python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word'
+    python contextfinder_py2.py '~/Downloads/dataset.csv' 'vowel' 'word'
 
 This returns a spreadsheet with all the sounds preceding and following the sounds given in the column 'vowel' in their respective 'word'. For the *AY0* in *high*, for instance, it adds *HH* (preceding sound) and *None* (following sound) to the columns 'pre_sound' and 'post_sound' respectively. It also enters the complete transcription *HH AY0* into a column called 'cmu_transcription'. Note that you need to use quotation marks around the variable_name and column_name when calling the Contextfinder. 
 
 The following command extracts the sounds two characters away from the variable and works with a tab-delimited file. It extracts sounds with a distance of two - i.e. the sound pre-preceding the variable or two sounds after the variable:
 
-    python contextfinder_py2.py '~/Downloads/dataset.csv','vowel', 'word', -2, 2, 'excel-tab'
+    python contextfinder_py2.py '~/Downloads/dataset.csv' 'vowel' 'word' -2 2 'excel-tab'
 
 While this returns *None* for both preceding and following sound in *high* because the word is too short, it returns an *AH0* as following sound in the word *highness* (ARPABET:  *HH AY1 N AH0 S*).
 
