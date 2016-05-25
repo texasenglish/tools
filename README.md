@@ -1,3 +1,4 @@
 # txenglish
 
-Scripts for projects of the Texas English Linguistic Lab. 
+Tools for the Texas English Linguistics Lab: Includes the Faveconverter. 
+Visit us: http://www.texasenglish.org
