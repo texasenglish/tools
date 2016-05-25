@@ -29,14 +29,9 @@ Arguments
 
 ####Preparations
 
-The file that matches sounds to labels needs to be formatted like this:
+The file that matches sounds to labels must consist of one sound-label pair per line, separated with a *:*. Thus: *sound1:label1*
 
-sound1:label
-
-sound2:label
-
-...
-E.g.:
+For instance:
 >DH:vd_fricative
 
 >HH:vl_fricative
