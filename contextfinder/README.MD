@@ -29,9 +29,11 @@ Arguments
 
 ####Preparations
 
-The file that matches sounds to labels must consist of one sound-label pair per line, separated with a *:*. Thus: *sound1:label1*
+The file that matches sounds to labels must consist of one sound-label pair per line, separated by  colon (*:*). Thus: *sound1:label1*
 
 For instance:
+>...
+
 >DH:vd_fricative
 
 >HH:vl_fricative
