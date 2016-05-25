@@ -21,15 +21,22 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound.
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound.
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
-    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line,e.g.                                                                                                                                    DH:v fricative
-                                                                                                                HH:vl fricative
-                                                                                                                ...
+    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line. See below for formatting. 
     
 
 ###How to run it
 >For general instructions on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
 
 ####Preparations
+
+The file that matches sounds to labels needs to be formatted like this:
+sound1:label
+sound2:label
+...
+E.g.:
+DH:vd_fricative
+HH:vl_fricative
+...
 
 You need to have the Natural Language Toolkit installed for this to work. If you don't, simply type
 
