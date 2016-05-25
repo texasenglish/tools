@@ -21,7 +21,7 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound.
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound.
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
-    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line. See below for formatting. 
+    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line. See [below](https://github.com/patrickschu/txenglish/blob/master/contextfinder/README.MD#preparations) for formatting. 
     
 
 ###How to run it
