@@ -3,7 +3,7 @@
 ###Description
 The Contextfinder takes a file with speech sounds and uses the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) to add sounds preceding and following the sound of interest.
 
-The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". The initial dataset must contain 
+The Contextfinder accepts comma-separated and tab-delimited files. It adds the columns 'pre_sound', 'post_sound' and 'cmu_transcription' to the spreadsheet and saves it as "ORIGINALNAME_context_added.csv". It also offers the option of adding labels to each sound, e.g. categories like voiced fricative. The initial dataset must contain 
 
 * The variable_column: a column of any name containing the variables, transcribed according to  [ARPABET](https://en.wikipedia.org/wiki/Arpabet) conventions. 
 * The word_column: a column of any name with the word the respective variable occurred in. 
@@ -11,7 +11,7 @@ The Contextfinder accepts comma-separated and tab-delimited files. It adds the c
 
 For instance, if we have an instance of the word *high* and are interested in the qualities of its vowel, we could enter the transcribed vowel (*AY1*) into a column labeled 'vowel' and the word *high* in a column labeled 'word'. See below on how this would be reflected in the settings of Contextfinder.  
 
-    python contextfinder_py2.py file_name, vowel_column, word_column, pre_distance=-1, post_distance=1, dialect='excel'
+    python contextfinder_py2.py file_name vowel_column word_column pre_distance=-1 post_distance=1 dialect='excel' dict_file=None
 
 Arguments
 
@@ -21,6 +21,10 @@ Arguments
     pre_distance -- the distance from the variable to the preceding sound to be extracted. Defaults to -1, i.e. the immediately preceding sound.
     post_distance -- the distance from the variable to the following sound to be extracted. Deafaults to 1, i.e. the immediately following sound.
     dialect -- the formatting of the csv file, defaults to 'excel'. For tab-delimited files, set to 'excel-tab'.
+    dict_file -- the path to a text file that matches sounds to labels, with one sound:label pair per line,e.g.                                                                                                                                    DH:v fricative
+                                                                                                                HH:vl fricative
+                                                                                                                ...
+    
 
 ###How to run it
 >For general instructions on how to run Python scripts in a shell or how to get the settings right, please click [here](https://github.com/patrickschu/txenglish/edit/master/faveconverter/README.md). 
