@@ -30,13 +30,18 @@ Arguments
 ####Preparations
 
 The file that matches sounds to labels needs to be formatted like this:
+
 sound1:label
+
 sound2:label
+
 ...
 E.g.:
-DH:vd_fricative
-HH:vl_fricative
-...
+>DH:vd_fricative
+
+>HH:vl_fricative
+
+> ...
 
 You need to have the Natural Language Toolkit installed for this to work. If you don't, simply type
 
