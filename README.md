@@ -1,6 +1,6 @@
 # Tools
 
-Tools for the Texas English Linguistics Lab.
+Tools for projects of the Texas English Linguistics Lab.
 
 The [Faveconverter](https://github.com/texasenglish/tools/tree/master/faveconverter) converts various subtitle formats into tab-delimited text files to be used for vowel alignment in [FAVE](http://fave.ling.upenn.edu/about.html).
 
